@@ -1,0 +1,784 @@
+overed landing · HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Covered — Your family, handled.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ 
+    :root {
+      --cream: #FAF7F2;
+      --warm-white: #FFFEF9;
+      --charcoal: #1C1917;
+      --warm-brown: #78350F;
+      --amber: #D97706;
+      --amber-light: #FEF3C7;
+      --sage: #4A7C59;
+      --sage-light: #ECFDF5;
+      --text-muted: #78716C;
+      --border: #E7E3DC;
+    }
+ 
+    html { scroll-behavior: smooth; }
+ 
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--charcoal);
+      overflow-x: hidden;
+    }
+ 
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(250, 247, 242, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+ 
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--charcoal);
+      letter-spacing: -0.5px;
+    }
+ 
+    .nav-cta {
+      background: var(--charcoal);
+      color: var(--cream);
+      padding: 10px 22px;
+      border-radius: 100px;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+ 
+    .nav-cta:hover { background: var(--warm-brown); }
+ 
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      padding: 120px 80px 80px;
+      gap: 80px;
+      position: relative;
+      overflow: hidden;
+    }
+ 
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -200px;
+      right: -200px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, #FEF3C7 0%, transparent 70%);
+      pointer-events: none;
+    }
+ 
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--amber-light);
+      color: var(--warm-brown);
+      padding: 6px 14px;
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 500;
+      margin-bottom: 28px;
+    }
+ 
+    .hero-badge::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: var(--amber);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+ 
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.8); }
+    }
+ 
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(48px, 5vw, 72px);
+      font-weight: 900;
+      line-height: 1.05;
+      letter-spacing: -2px;
+      color: var(--charcoal);
+      margin-bottom: 24px;
+    }
+ 
+    .hero-title em {
+      font-style: italic;
+      color: var(--warm-brown);
+    }
+ 
+    .hero-sub {
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--text-muted);
+      max-width: 460px;
+      margin-bottom: 44px;
+      font-weight: 300;
+    }
+ 
+    .hero-cta-group {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+ 
+    .cta-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--charcoal);
+      color: var(--cream);
+      padding: 18px 32px;
+      border-radius: 16px;
+      font-size: 16px;
+      font-weight: 500;
+      text-decoration: none;
+      width: fit-content;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 20px rgba(28,25,23,0.2);
+    }
+ 
+    .cta-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(28,25,23,0.3);
+    }
+ 
+    .cta-number {
+      font-size: 14px;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+ 
+    .cta-number strong {
+      color: var(--charcoal);
+      font-weight: 500;
+    }
+ 
+    /* ── PHONE MOCKUP ── */
+    .hero-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+ 
+    .phone-wrap {
+      position: relative;
+      animation: float 4s ease-in-out infinite;
+    }
+ 
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-12px); }
+    }
+ 
+    .phone {
+      width: 280px;
+      background: var(--charcoal);
+      border-radius: 40px;
+      padding: 16px;
+      box-shadow: 0 40px 80px rgba(28,25,23,0.3), 0 0 0 1px rgba(255,255,255,0.1);
+    }
+ 
+    .phone-screen {
+      background: #F2F2F7;
+      border-radius: 28px;
+      overflow: hidden;
+      padding: 20px 16px;
+    }
+ 
+    .phone-header {
+      text-align: center;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--charcoal);
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+      margin-bottom: 16px;
+    }
+ 
+    .msg {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+ 
+    .msg-bubble {
+      max-width: 85%;
+      padding: 10px 14px;
+      border-radius: 18px;
+      font-size: 13px;
+      line-height: 1.4;
+    }
+ 
+    .msg-in .msg-bubble {
+      background: white;
+      color: var(--charcoal);
+      border-bottom-left-radius: 4px;
+      align-self: flex-start;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    }
+ 
+    .msg-out .msg-bubble {
+      background: #007AFF;
+      color: white;
+      border-bottom-right-radius: 4px;
+      align-self: flex-end;
+    }
+ 
+    .msg-label {
+      font-size: 10px;
+      color: var(--text-muted);
+      padding: 0 4px;
+    }
+ 
+    .msg-in .msg-label { align-self: flex-start; }
+    .msg-out .msg-label { align-self: flex-end; }
+ 
+    /* ── HOW IT WORKS ── */
+    .section {
+      padding: 100px 80px;
+    }
+ 
+    .section-label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 16px;
+    }
+ 
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(36px, 4vw, 52px);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -1px;
+      margin-bottom: 60px;
+      max-width: 600px;
+    }
+ 
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+    }
+ 
+    .step {
+      position: relative;
+    }
+ 
+    .step-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 64px;
+      font-weight: 900;
+      color: var(--border);
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+ 
+    .step-title {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: var(--charcoal);
+    }
+ 
+    .step-desc {
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--text-muted);
+      font-weight: 300;
+    }
+ 
+    /* ── FEATURES ── */
+    .features-section {
+      background: var(--charcoal);
+      color: var(--cream);
+      padding: 100px 80px;
+    }
+ 
+    .features-section .section-label { color: var(--amber); }
+    .features-section .section-title { color: var(--cream); }
+ 
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 24px;
+      overflow: hidden;
+    }
+ 
+    .feature {
+      background: rgba(255,255,255,0.04);
+      padding: 40px;
+      transition: background 0.2s;
+    }
+ 
+    .feature:hover { background: rgba(255,255,255,0.08); }
+ 
+    .feature-icon {
+      font-size: 32px;
+      margin-bottom: 16px;
+    }
+ 
+    .feature-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: var(--cream);
+    }
+ 
+    .feature-desc {
+      font-size: 14px;
+      line-height: 1.7;
+      color: rgba(250,247,242,0.6);
+      font-weight: 300;
+    }
+ 
+    /* ── WHO IT'S FOR ── */
+    .who-section {
+      padding: 100px 80px;
+      background: var(--warm-white);
+    }
+ 
+    .who-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 60px;
+    }
+ 
+    .who-card {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 36px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+ 
+    .who-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(28,25,23,0.08);
+    }
+ 
+    .who-emoji { font-size: 36px; margin-bottom: 16px; }
+ 
+    .who-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+ 
+    .who-desc {
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--text-muted);
+      font-weight: 300;
+    }
+ 
+    /* ── TESTIMONIALS ── */
+    .testimonials {
+      padding: 100px 80px;
+      background: var(--amber-light);
+    }
+ 
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 60px;
+    }
+ 
+    .testimonial {
+      background: white;
+      border-radius: 20px;
+      padding: 32px;
+      box-shadow: 0 4px 20px rgba(28,25,23,0.06);
+    }
+ 
+    .testimonial-quote {
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--charcoal);
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+ 
+    .testimonial-author {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--charcoal);
+    }
+ 
+    .testimonial-role {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+ 
+    /* ── BOTTOM CTA ── */
+    .bottom-cta {
+      padding: 120px 80px;
+      text-align: center;
+      background: var(--cream);
+      position: relative;
+      overflow: hidden;
+    }
+ 
+    .bottom-cta::before {
+      content: '';
+      position: absolute;
+      bottom: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 400px;
+      background: radial-gradient(circle, #FEF3C7 0%, transparent 70%);
+      pointer-events: none;
+    }
+ 
+    .bottom-cta-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(40px, 5vw, 64px);
+      font-weight: 900;
+      line-height: 1.05;
+      letter-spacing: -2px;
+      margin-bottom: 20px;
+    }
+ 
+    .bottom-cta-sub {
+      font-size: 18px;
+      color: var(--text-muted);
+      margin-bottom: 48px;
+      font-weight: 300;
+    }
+ 
+    .bottom-cta-box {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      background: var(--charcoal);
+      color: var(--cream);
+      padding: 32px 48px;
+      border-radius: 24px;
+      box-shadow: 0 20px 60px rgba(28,25,23,0.2);
+    }
+ 
+    .bottom-cta-label {
+      font-size: 13px;
+      color: rgba(250,247,242,0.6);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+ 
+    .bottom-cta-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      font-weight: 700;
+      letter-spacing: -1px;
+    }
+ 
+    .bottom-cta-hint {
+      font-size: 13px;
+      color: rgba(250,247,242,0.5);
+    }
+ 
+    /* ── FOOTER ── */
+    footer {
+      padding: 40px 80px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+ 
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-weight: 700;
+    }
+ 
+    .footer-text {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+ 
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 100px 32px 60px;
+        gap: 60px;
+        text-align: center;
+      }
+ 
+      .hero-sub { margin: 0 auto 44px; }
+      .hero-cta-group { align-items: center; }
+      .hero-visual { order: -1; }
+ 
+      .section, .who-section, .testimonials, .bottom-cta, .features-section {
+        padding: 60px 32px;
+      }
+ 
+      .steps, .features-grid, .who-grid, .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+ 
+      footer {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+        padding: 32px;
+      }
+ 
+      nav { padding: 16px 24px; }
+    }
+ 
+    /* ── ANIMATIONS ── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+ 
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+ 
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">Covered</div>
+    <a href="sms:+14322203767&body=Hi" class="nav-cta">Text to start free →</a>
+  </nav>
+ 
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">Now in beta — 7 days free</div>
+      <h1 class="hero-title">
+        Your family,<br>
+        <em>handled.</em>
+      </h1>
+      <p class="hero-sub">
+        Text Mary. She remembers every pickup, coordinates every handoff, and makes sure no one drops the ball — so you don't have to carry it all in your head.
+      </p>
+      <div class="hero-cta-group">
+        <a href="sms:+14322203767&body=Hi" class="cta-primary">
+          <span>📱</span>
+          Text to start your free trial
+        </a>
+        <div class="cta-number">
+          Or text <strong>Hi</strong> to <strong>(432) 220-3767</strong>
+        </div>
+      </div>
+    </div>
+ 
+    <div class="hero-visual">
+      <div class="phone-wrap">
+        <div class="phone">
+          <div class="phone-screen">
+            <div class="phone-header">Mary · Covered</div>
+ 
+            <div class="msg msg-out">
+              <div class="msg-bubble">Claire has soccer pickup Friday at 4. Jenny is getting her.</div>
+              <div class="msg-label">You</div>
+            </div>
+ 
+            <div class="msg msg-in">
+              <div class="msg-bubble">Got it — Jenny has Claire's soccer pickup Friday at 4pm. I'll remind her at 2 and again at 3:30. 👍</div>
+              <div class="msg-label">Mary · just now</div>
+            </div>
+ 
+            <div class="msg msg-out">
+              <div class="msg-bubble">What's on the schedule this week?</div>
+              <div class="msg-label">You</div>
+            </div>
+ 
+            <div class="msg msg-in">
+              <div class="msg-bubble">Tuesday: Jackson has football at 4 (you're on pickup). Friday: Claire's soccer at 4 (Jenny's covering). Rest of the week is clear!</div>
+              <div class="msg-label">Mary · just now</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- HOW IT WORKS -->
+  <section class="section">
+    <div class="section-label">How it works</div>
+    <h2 class="section-title fade-up">Three texts to get started. Zero apps to download.</h2>
+ 
+    <div class="steps">
+      <div class="step fade-up">
+        <div class="step-number">01</div>
+        <div class="step-title">Text Mary "Hi"</div>
+        <p class="step-desc">She'll ask your name, your kids, and who else is in your village. Setup takes under 3 minutes — right in the text thread.</p>
+      </div>
+      <div class="step fade-up">
+        <div class="step-number">02</div>
+        <div class="step-title">Tell her what's happening</div>
+        <p class="step-desc">"Jackson has football Wednesday at 4, Jenny's picking him up." That's it. Mary logs it, sets reminders, and coordinates whoever needs to know.</p>
+      </div>
+      <div class="step fade-up">
+        <div class="step-number">03</div>
+        <div class="step-title">Go live your life</div>
+        <p class="step-desc">Mary handles the follow-up. Reminders go out automatically. Nobody drops the ball. You stop carrying it all in your head.</p>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- FEATURES -->
+  <section class="features-section">
+    <div class="section-label">What Mary does</div>
+    <h2 class="section-title fade-up">Everything you used to have to remember yourself.</h2>
+ 
+    <div class="features-grid">
+      <div class="feature fade-up">
+        <div class="feature-icon">📅</div>
+        <div class="feature-title">Schedule tracking</div>
+        <p class="feature-desc">Text Mary any event in plain language. She logs it, remembers it, and keeps your whole family's schedule in one place.</p>
+      </div>
+      <div class="feature fade-up">
+        <div class="feature-icon">⏰</div>
+        <div class="feature-title">Automatic reminders</div>
+        <p class="feature-desc">2 hours out and 30 minutes out — Mary reminds whoever's on for the pickup without you having to remember to remind them.</p>
+      </div>
+      <div class="feature fade-up">
+        <div class="feature-icon">🤝</div>
+        <div class="feature-title">Village coordination</div>
+        <p class="feature-desc">Co-parent, partner, grandparent, nanny — add anyone to your village. Mary coordinates between all of them so you don't have to.</p>
+      </div>
+      <div class="feature fade-up">
+        <div class="feature-icon">☀️</div>
+        <div class="feature-title">Morning briefings</div>
+        <p class="feature-desc">Every morning at 7am, Mary sends a quick heads up on what's happening today. Like a friend who checked your calendar so you don't have to.</p>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- WHO IT'S FOR -->
+  <section class="who-section">
+    <div class="section-label">Who it's for</div>
+    <h2 class="section-title fade-up">If you have kids and a schedule, Covered is for you.</h2>
+ 
+    <div class="who-grid">
+      <div class="who-card fade-up">
+        <div class="who-emoji">👩‍👧‍👦</div>
+        <div class="who-title">Solo parents</div>
+        <p class="who-desc">You're running the whole show. Mary is the teammate you never had — remembering everything, reminding everyone, keeping it all moving.</p>
+      </div>
+      <div class="who-card fade-up">
+        <div class="who-emoji">🤝</div>
+        <div class="who-title">Co-parents</div>
+        <p class="who-desc">Coordinating pickups across two households without the friction. Mary is the neutral middleman who just makes sure the kids get where they need to go.</p>
+      </div>
+      <div class="who-card fade-up">
+        <div class="who-emoji">🏡</div>
+        <div class="who-title">Busy families</div>
+        <p class="who-desc">Two parents, three kids, four activities, five people in the village. Mary keeps everyone on the same page without the group chat chaos.</p>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="section-label">Early users</div>
+    <h2 class="section-title fade-up">What parents are saying.</h2>
+ 
+    <div class="testimonials-grid">
+      <div class="testimonial fade-up">
+        <p class="testimonial-quote">"I texted Mary about pickup on Tuesday and she just... handled it. Reminded my mom, confirmed it with me, never thought about it again. That's all I wanted."</p>
+        <div class="testimonial-author">Jenny R.</div>
+        <div class="testimonial-role">Mom of 2 · Austin, TX</div>
+      </div>
+      <div class="testimonial fade-up">
+        <p class="testimonial-quote">"Co-parenting is hard enough. Having something that coordinates between us without us having to talk every day is genuinely life-changing."</p>
+        <div class="testimonial-author">Jeff M.</div>
+        <div class="testimonial-role">Co-parent · Dallas, TX</div>
+      </div>
+      <div class="testimonial fade-up">
+        <p class="testimonial-quote">"My mother-in-law is in the village and she doesn't do apps. Mary texts her directly. Problem solved."</p>
+        <div class="testimonial-author">Claire S.</div>
+        <div class="testimonial-role">Mom of 3 · Chicago, IL</div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- BOTTOM CTA -->
+  <section class="bottom-cta">
+    <h2 class="bottom-cta-title fade-up">You're covered.</h2>
+    <p class="bottom-cta-sub fade-up">7 days free. No app. No credit card. Just text.</p>
+    <div class="bottom-cta-box fade-up">
+      <div class="bottom-cta-label">Text "Hi" to</div>
+      <div class="bottom-cta-number">(432) 220-3767</div>
+      <div class="bottom-cta-hint">WhatsApp or SMS · 7-day free trial</div>
+    </div>
+  </section>
+ 
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">Covered</div>
+    <div class="footer-text">© 2026 Covered. lifecovered.app</div>
+    <div class="footer-text">Questions? Text us.</div>
+    <div class="footer-text" style="font-size:12px;color:#A8A29E;">Mary is an AI assistant. You are not talking to a human.</div>
+  </footer>
+ 
+  <script>
+    // Scroll animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('visible')
+          }, i * 100)
+          observer.unobserve(entry.target)
+        }
+      })
+    }, { threshold: 0.1 })
+ 
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el))
+  </script>
+ 
+</body>
+</html>
+ 
