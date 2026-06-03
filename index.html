@@ -743,4 +743,65 @@
         <p class="who-desc">Coordinating across two households without the friction. Mary handles the logistics so kids get where they need to go — no group chat chaos required.</p>
       </div>
     </div>
+  </section>
  
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="section-label">Early users</div>
+    <h2 class="section-title fade-up">What parents are saying.</h2>
+ 
+    <div class="testimonials-grid">
+      <div class="testimonial fade-up">
+        <p class="testimonial-quote">"I texted Mary about pickup on Tuesday and she just... handled it. Reminded my mom, confirmed it with me, never thought about it again. That's all I wanted."</p>
+        <div class="testimonial-author">Amanda K.</div>
+        <div class="testimonial-role">Mom of 2 · Denver, CO</div>
+      </div>
+      <div class="testimonial fade-up">
+        <p class="testimonial-quote">"Having an AI that coordinates between everyone without us having to talk every day is genuinely life-changing. It just works."</p>
+        <div class="testimonial-author">Marcus D.</div>
+        <div class="testimonial-role">Dad of 1 · Nashville, TN</div>
+      </div>
+      <div class="testimonial fade-up">
+        <p class="testimonial-quote">"My mother-in-law is in the village and she doesn't do apps. Mary texts her directly. Problem solved."</p>
+        <div class="testimonial-author">Rachel T.</div>
+        <div class="testimonial-role">Mom of 3 · Phoenix, AZ</div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- BOTTOM CTA -->
+  <section class="bottom-cta">
+    <h2 class="bottom-cta-title fade-up">Your life,<br><em style="font-style:italic;color:#D97706;">covered.</em></h2>
+    <p class="bottom-cta-sub fade-up">7 days free. No app. No credit card. Just text.</p>
+    <div class="bottom-cta-box fade-up">
+      <div class="bottom-cta-label">Text "Hi" to</div>
+      <div class="bottom-cta-number">(432) 220-3767</div>
+      <div class="bottom-cta-hint">WhatsApp or SMS · 7-day free trial · AI-powered</div>
+    </div>
+  </section>
+ 
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">Life. Covered.</div>
+    <div class="footer-text">© 2026 Life. Covered. · lifecovered.app</div>
+    <div class="footer-text">Questions? Text us.</div>
+    <div class="footer-text" style="font-size:12px;color:#A8A29E;">Mary is an AI assistant · Not a human · Available 24/7</div>
+  </footer>
+ 
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('visible')
+          }, i * 100)
+          observer.unobserve(entry.target)
+        }
+      })
+    }, { threshold: 0.1 })
+ 
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el))
+  </script>
+ 
+</body>
+</html>
