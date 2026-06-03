@@ -1,11 +1,28 @@
-overed landing · HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Covered — Your family, handled.</title>
+  <title>Life. Covered. — No app. No reminders. Just text.</title>
+  <meta property="og:title" content="Life. Covered. — No app. Just text.">
+  <meta property="og:description" content="Text Mary your family schedule. She handles the reminders, the coordination, and the follow-up. No app needed.">
+  <meta property="og:image" content="https://lifecovered.app/og-image.png">
+  <meta property="og:url" content="https://lifecovered.app">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Life. Covered. — No app. Just text.">
+  <meta name="twitter:description" content="Text Mary your family schedule. She handles the reminders, the coordination, and the follow-up. No app needed.">
+  <meta name="twitter:image" content="https://lifecovered.app/og-image.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <meta property="og:title" content="Life. Covered. — No app. Just text.">
+  <meta property="og:description" content="Text Mary your family schedule. She handles the reminders, the coordination, and the follow-up. No app needed.">
+  <meta property="og:image" content="https://lifecovered.app/og-image.png">
+  <meta property="og:url" content="https://lifecovered.app">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Life. Covered. — No app. Just text.">
+  <meta name="twitter:description" content="Text Mary your family schedule. She handles the reminders, the coordination, and the follow-up. No app needed.">
+  <meta name="twitter:image" content="https://lifecovered.app/og-image.png">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
@@ -211,7 +228,7 @@ overed landing · HTML
     }
  
     .phone-screen {
-      background: #F2F2F7;
+      background: #FFFFFF;
       border-radius: 28px;
       overflow: hidden;
       padding: 20px 16px;
@@ -240,21 +257,23 @@ overed landing · HTML
       border-radius: 18px;
       font-size: 13px;
       line-height: 1.4;
+      text-align: left;
     }
  
     .msg-in .msg-bubble {
-      background: white;
-      color: var(--charcoal);
-      border-bottom-left-radius: 4px;
+      background: #E9E9EB;
+      color: #000;
+      border-radius: 18px 18px 18px 4px;
       align-self: flex-start;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+      font-size: 14px;
     }
  
     .msg-out .msg-bubble {
       background: #007AFF;
       color: white;
-      border-bottom-right-radius: 4px;
+      border-radius: 18px 18px 4px 18px;
       align-self: flex-end;
+      font-size: 14px;
     }
  
     .msg-label {
@@ -585,8 +604,14 @@ overed landing · HTML
 <body>
  
   <!-- NAV -->
+  
+  <!-- AI TRANSPARENCY BADGE -->
+  <div style="background: #1C1917; color: #FAF7F2; text-align: center; padding: 14px 40px; font-size: 13px; letter-spacing: 0.3px;">
+    <span style="opacity: 0.6;">Powered by AI · </span>Mary is an AI assistant, not a human. She's available 24/7 and never forgets a thing. <span style="opacity: 0.6;"> · No humans read your messages.</span>
+  </div>
+ 
   <nav>
-    <div class="nav-logo">Covered</div>
+    <div class="nav-logo">Life. Covered.</div>
     <a href="sms:+14322203767&body=Hi" class="nav-cta">Text to start free →</a>
   </nav>
  
@@ -595,11 +620,11 @@ overed landing · HTML
     <div class="hero-content">
       <div class="hero-badge">Now in beta — 7 days free</div>
       <h1 class="hero-title">
-        Your family,<br>
-        <em>handled.</em>
+        Your life,<br>
+        <em>covered.</em>
       </h1>
       <p class="hero-sub">
-        Text Mary. She remembers every pickup, coordinates every handoff, and makes sure no one drops the ball — so you don't have to carry it all in your head.
+        No app to download. No calendar to update. No reminders to set. Mary is an AI coordinator who lives in your texts — just message her the same way you message anyone and she handles the rest. Life. Covered. meets you exactly where you already are.
       </p>
       <div class="hero-cta-group">
         <a href="sms:+14322203767&body=Hi" class="cta-primary">
@@ -646,7 +671,7 @@ overed landing · HTML
   <!-- HOW IT WORKS -->
   <section class="section">
     <div class="section-label">How it works</div>
-    <h2 class="section-title fade-up">Three texts to get started. Zero apps to download.</h2>
+    <h2 class="section-title fade-up">No app. No calendar. No reminders to set. Just text.</h2>
  
     <div class="steps">
       <div class="step fade-up">
@@ -699,86 +724,23 @@ overed landing · HTML
   <!-- WHO IT'S FOR -->
   <section class="who-section">
     <div class="section-label">Who it's for</div>
-    <h2 class="section-title fade-up">If you have kids and a schedule, Covered is for you.</h2>
+    <h2 class="section-title fade-up">If you have kids and a phone, you're already set up.</h2>
  
     <div class="who-grid">
       <div class="who-card fade-up">
+        <div class="who-emoji">👨‍👩‍👧‍👦</div>
+        <div class="who-title">Busy families</div>
+        <p class="who-desc">Between work, school pickups, practices, and everything else — Mary, your AI coordinator, keeps the whole family on the same page without adding another app to manage.</p>
+      </div>
+      <div class="who-card fade-up">
         <div class="who-emoji">👩‍👧‍👦</div>
         <div class="who-title">Solo parents</div>
-        <p class="who-desc">You're running the whole show. Mary is the teammate you never had — remembering everything, reminding everyone, keeping it all moving.</p>
+        <p class="who-desc">You're running the whole show. Mary is the AI teammate you never had — remembering everything, reminding everyone, keeping it all moving 24/7.</p>
       </div>
       <div class="who-card fade-up">
         <div class="who-emoji">🤝</div>
         <div class="who-title">Co-parents</div>
-        <p class="who-desc">Coordinating pickups across two households without the friction. Mary is the neutral middleman who just makes sure the kids get where they need to go.</p>
-      </div>
-      <div class="who-card fade-up">
-        <div class="who-emoji">🏡</div>
-        <div class="who-title">Busy families</div>
-        <p class="who-desc">Two parents, three kids, four activities, five people in the village. Mary keeps everyone on the same page without the group chat chaos.</p>
+        <p class="who-desc">Coordinating across two households without the friction. Mary handles the logistics so kids get where they need to go — no group chat chaos required.</p>
       </div>
     </div>
-  </section>
- 
-  <!-- TESTIMONIALS -->
-  <section class="testimonials">
-    <div class="section-label">Early users</div>
-    <h2 class="section-title fade-up">What parents are saying.</h2>
- 
-    <div class="testimonials-grid">
-      <div class="testimonial fade-up">
-        <p class="testimonial-quote">"I texted Mary about pickup on Tuesday and she just... handled it. Reminded my mom, confirmed it with me, never thought about it again. That's all I wanted."</p>
-        <div class="testimonial-author">Jenny R.</div>
-        <div class="testimonial-role">Mom of 2 · Austin, TX</div>
-      </div>
-      <div class="testimonial fade-up">
-        <p class="testimonial-quote">"Co-parenting is hard enough. Having something that coordinates between us without us having to talk every day is genuinely life-changing."</p>
-        <div class="testimonial-author">Jeff M.</div>
-        <div class="testimonial-role">Co-parent · Dallas, TX</div>
-      </div>
-      <div class="testimonial fade-up">
-        <p class="testimonial-quote">"My mother-in-law is in the village and she doesn't do apps. Mary texts her directly. Problem solved."</p>
-        <div class="testimonial-author">Claire S.</div>
-        <div class="testimonial-role">Mom of 3 · Chicago, IL</div>
-      </div>
-    </div>
-  </section>
- 
-  <!-- BOTTOM CTA -->
-  <section class="bottom-cta">
-    <h2 class="bottom-cta-title fade-up">You're covered.</h2>
-    <p class="bottom-cta-sub fade-up">7 days free. No app. No credit card. Just text.</p>
-    <div class="bottom-cta-box fade-up">
-      <div class="bottom-cta-label">Text "Hi" to</div>
-      <div class="bottom-cta-number">(432) 220-3767</div>
-      <div class="bottom-cta-hint">WhatsApp or SMS · 7-day free trial</div>
-    </div>
-  </section>
- 
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-logo">Covered</div>
-    <div class="footer-text">© 2026 Covered. lifecovered.app</div>
-    <div class="footer-text">Questions? Text us.</div>
-    <div class="footer-text" style="font-size:12px;color:#A8A29E;">Mary is an AI assistant. You are not talking to a human.</div>
-  </footer>
- 
-  <script>
-    // Scroll animations
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry, i) => {
-        if (entry.isIntersecting) {
-          setTimeout(() => {
-            entry.target.classList.add('visible')
-          }, i * 100)
-          observer.unobserve(entry.target)
-        }
-      })
-    }, { threshold: 0.1 })
- 
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el))
-  </script>
- 
-</body>
-</html>
  
