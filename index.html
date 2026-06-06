@@ -27,29 +27,29 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
- 
+
     :root {
       --cream: #FAF7F2;
       --warm-white: #FFFEF9;
       --charcoal: #1C1917;
       --warm-brown: #78350F;
-      --amber: #D97706;
+      --amber: #2d6a4f;
       --amber-light: #FEF3C7;
       --sage: #4A7C59;
       --sage-light: #ECFDF5;
       --text-muted: #78716C;
       --border: #E7E3DC;
     }
- 
+
     html { scroll-behavior: smooth; }
- 
+
     body {
       font-family: 'DM Sans', sans-serif;
       background: var(--cream);
       color: var(--charcoal);
       overflow-x: hidden;
     }
- 
+
     /* ── NAV ── */
     nav {
       position: fixed;
@@ -65,7 +65,7 @@
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
     }
- 
+
     .nav-logo {
       font-family: 'Playfair Display', serif;
       font-size: 22px;
@@ -73,7 +73,7 @@
       color: var(--charcoal);
       letter-spacing: -0.5px;
     }
- 
+
     .nav-cta {
       background: var(--charcoal);
       color: var(--cream);
@@ -84,9 +84,9 @@
       text-decoration: none;
       transition: background 0.2s;
     }
- 
+
     .nav-cta:hover { background: var(--warm-brown); }
- 
+
     /* ── HERO ── */
     .hero {
       min-height: 100vh;
@@ -98,7 +98,7 @@
       position: relative;
       overflow: hidden;
     }
- 
+
     .hero::before {
       content: '';
       position: absolute;
@@ -109,7 +109,7 @@
       background: radial-gradient(circle, #FEF3C7 0%, transparent 70%);
       pointer-events: none;
     }
- 
+
     .hero-badge {
       display: inline-flex;
       align-items: center;
@@ -122,7 +122,7 @@
       font-weight: 500;
       margin-bottom: 28px;
     }
- 
+
     .hero-badge::before {
       content: '';
       width: 6px;
@@ -131,12 +131,12 @@
       border-radius: 50%;
       animation: pulse 2s infinite;
     }
- 
+
     @keyframes pulse {
       0%, 100% { opacity: 1; transform: scale(1); }
       50% { opacity: 0.5; transform: scale(0.8); }
     }
- 
+
     .hero-title {
       font-family: 'Playfair Display', serif;
       font-size: clamp(48px, 5vw, 72px);
@@ -146,12 +146,12 @@
       color: var(--charcoal);
       margin-bottom: 24px;
     }
- 
+
     .hero-title em {
       font-style: italic;
       color: var(--warm-brown);
     }
- 
+
     .hero-sub {
       font-size: 18px;
       line-height: 1.7;
@@ -160,13 +160,13 @@
       margin-bottom: 44px;
       font-weight: 300;
     }
- 
+
     .hero-cta-group {
       display: flex;
       flex-direction: column;
       gap: 16px;
     }
- 
+
     .cta-primary {
       display: inline-flex;
       align-items: center;
@@ -182,12 +182,12 @@
       transition: transform 0.2s, box-shadow 0.2s;
       box-shadow: 0 4px 20px rgba(28,25,23,0.2);
     }
- 
+
     .cta-primary:hover {
       transform: translateY(-2px);
       box-shadow: 0 8px 30px rgba(28,25,23,0.3);
     }
- 
+
     .cta-number {
       font-size: 14px;
       color: var(--text-muted);
@@ -195,12 +195,12 @@
       align-items: center;
       gap: 8px;
     }
- 
+
     .cta-number strong {
       color: var(--charcoal);
       font-weight: 500;
     }
- 
+
     /* ── PHONE MOCKUP ── */
     .hero-visual {
       position: relative;
@@ -208,17 +208,17 @@
       justify-content: center;
       align-items: center;
     }
- 
+
     .phone-wrap {
       position: relative;
       animation: float 4s ease-in-out infinite;
     }
- 
+
     @keyframes float {
       0%, 100% { transform: translateY(0px); }
       50% { transform: translateY(-12px); }
     }
- 
+
     .phone {
       width: 280px;
       background: var(--charcoal);
@@ -226,14 +226,14 @@
       padding: 16px;
       box-shadow: 0 40px 80px rgba(28,25,23,0.3), 0 0 0 1px rgba(255,255,255,0.1);
     }
- 
+
     .phone-screen {
       background: #FFFFFF;
       border-radius: 28px;
       overflow: hidden;
       padding: 20px 16px;
     }
- 
+
     .phone-header {
       text-align: center;
       font-size: 12px;
@@ -243,14 +243,14 @@
       border-bottom: 1px solid rgba(0,0,0,0.08);
       margin-bottom: 16px;
     }
- 
+
     .msg {
       display: flex;
       flex-direction: column;
       gap: 8px;
       margin-bottom: 8px;
     }
- 
+
     .msg-bubble {
       max-width: 85%;
       padding: 10px 14px;
@@ -259,7 +259,7 @@
       line-height: 1.4;
       text-align: left;
     }
- 
+
     .msg-in .msg-bubble {
       background: #E9E9EB;
       color: #000;
@@ -267,7 +267,7 @@
       align-self: flex-start;
       font-size: 14px;
     }
- 
+
     .msg-out .msg-bubble {
       background: #007AFF;
       color: white;
@@ -275,21 +275,21 @@
       align-self: flex-end;
       font-size: 14px;
     }
- 
+
     .msg-label {
       font-size: 10px;
       color: var(--text-muted);
       padding: 0 4px;
     }
- 
+
     .msg-in .msg-label { align-self: flex-start; }
     .msg-out .msg-label { align-self: flex-end; }
- 
+
     /* ── HOW IT WORKS ── */
     .section {
       padding: 100px 80px;
     }
- 
+
     .section-label {
       font-size: 12px;
       font-weight: 600;
@@ -298,7 +298,7 @@
       color: var(--amber);
       margin-bottom: 16px;
     }
- 
+
     .section-title {
       font-family: 'Playfair Display', serif;
       font-size: clamp(36px, 4vw, 52px);
@@ -308,17 +308,17 @@
       margin-bottom: 60px;
       max-width: 600px;
     }
- 
+
     .steps {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 40px;
     }
- 
+
     .step {
       position: relative;
     }
- 
+
     .step-number {
       font-family: 'Playfair Display', serif;
       font-size: 64px;
@@ -327,31 +327,31 @@
       line-height: 1;
       margin-bottom: 16px;
     }
- 
+
     .step-title {
       font-size: 20px;
       font-weight: 600;
       margin-bottom: 12px;
       color: var(--charcoal);
     }
- 
+
     .step-desc {
       font-size: 15px;
       line-height: 1.7;
       color: var(--text-muted);
       font-weight: 300;
     }
- 
+
     /* ── FEATURES ── */
     .features-section {
       background: var(--charcoal);
       color: var(--cream);
       padding: 100px 80px;
     }
- 
+
     .features-section .section-label { color: var(--amber); }
     .features-section .section-title { color: var(--cream); }
- 
+
     .features-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -360,47 +360,47 @@
       border-radius: 24px;
       overflow: hidden;
     }
- 
+
     .feature {
       background: rgba(255,255,255,0.04);
       padding: 40px;
       transition: background 0.2s;
     }
- 
+
     .feature:hover { background: rgba(255,255,255,0.08); }
- 
+
     .feature-icon {
       font-size: 32px;
       margin-bottom: 16px;
     }
- 
+
     .feature-title {
       font-size: 18px;
       font-weight: 600;
       margin-bottom: 10px;
       color: var(--cream);
     }
- 
+
     .feature-desc {
       font-size: 14px;
       line-height: 1.7;
       color: rgba(250,247,242,0.6);
       font-weight: 300;
     }
- 
+
     /* ── WHO IT'S FOR ── */
     .who-section {
       padding: 100px 80px;
       background: var(--warm-white);
     }
- 
+
     .who-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 24px;
       margin-top: 60px;
     }
- 
+
     .who-card {
       background: var(--cream);
       border: 1px solid var(--border);
@@ -408,47 +408,47 @@
       padding: 36px;
       transition: transform 0.2s, box-shadow 0.2s;
     }
- 
+
     .who-card:hover {
       transform: translateY(-4px);
       box-shadow: 0 20px 40px rgba(28,25,23,0.08);
     }
- 
+
     .who-emoji { font-size: 36px; margin-bottom: 16px; }
- 
+
     .who-title {
       font-size: 18px;
       font-weight: 600;
       margin-bottom: 10px;
     }
- 
+
     .who-desc {
       font-size: 14px;
       line-height: 1.7;
       color: var(--text-muted);
       font-weight: 300;
     }
- 
+
     /* ── TESTIMONIALS ── */
     .testimonials {
       padding: 100px 80px;
       background: var(--amber-light);
     }
- 
+
     .testimonials-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 24px;
       margin-top: 60px;
     }
- 
+
     .testimonial {
       background: white;
       border-radius: 20px;
       padding: 32px;
       box-shadow: 0 4px 20px rgba(28,25,23,0.06);
     }
- 
+
     .testimonial-quote {
       font-size: 15px;
       line-height: 1.7;
@@ -456,19 +456,19 @@
       margin-bottom: 20px;
       font-style: italic;
     }
- 
+
     .testimonial-author {
       font-size: 13px;
       font-weight: 600;
       color: var(--charcoal);
     }
- 
+
     .testimonial-role {
       font-size: 12px;
       color: var(--text-muted);
       margin-top: 2px;
     }
- 
+
     /* ── BOTTOM CTA ── */
     .bottom-cta {
       padding: 120px 80px;
@@ -477,7 +477,7 @@
       position: relative;
       overflow: hidden;
     }
- 
+
     .bottom-cta::before {
       content: '';
       position: absolute;
@@ -489,7 +489,7 @@
       background: radial-gradient(circle, #FEF3C7 0%, transparent 70%);
       pointer-events: none;
     }
- 
+
     .bottom-cta-title {
       font-family: 'Playfair Display', serif;
       font-size: clamp(40px, 5vw, 64px);
@@ -498,14 +498,14 @@
       letter-spacing: -2px;
       margin-bottom: 20px;
     }
- 
+
     .bottom-cta-sub {
       font-size: 18px;
       color: var(--text-muted);
       margin-bottom: 48px;
       font-weight: 300;
     }
- 
+
     .bottom-cta-box {
       display: inline-flex;
       flex-direction: column;
@@ -517,26 +517,26 @@
       border-radius: 24px;
       box-shadow: 0 20px 60px rgba(28,25,23,0.2);
     }
- 
+
     .bottom-cta-label {
       font-size: 13px;
       color: rgba(250,247,242,0.6);
       text-transform: uppercase;
       letter-spacing: 1.5px;
     }
- 
+
     .bottom-cta-number {
       font-family: 'Playfair Display', serif;
       font-size: 36px;
       font-weight: 700;
       letter-spacing: -1px;
     }
- 
+
     .bottom-cta-hint {
       font-size: 13px;
       color: rgba(250,247,242,0.5);
     }
- 
+
     /* ── FOOTER ── */
     footer {
       padding: 40px 80px;
@@ -545,18 +545,18 @@
       align-items: center;
       justify-content: space-between;
     }
- 
+
     .footer-logo {
       font-family: 'Playfair Display', serif;
       font-size: 18px;
       font-weight: 700;
     }
- 
+
     .footer-text {
       font-size: 13px;
       color: var(--text-muted);
     }
- 
+
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
       .hero {
@@ -565,36 +565,36 @@
         gap: 60px;
         text-align: center;
       }
- 
+
       .hero-sub { margin: 0 auto 44px; }
       .hero-cta-group { align-items: center; }
       .hero-visual { order: -1; }
- 
+
       .section, .who-section, .testimonials, .bottom-cta, .features-section {
         padding: 60px 32px;
       }
- 
+
       .steps, .features-grid, .who-grid, .testimonials-grid {
         grid-template-columns: 1fr;
       }
- 
+
       footer {
         flex-direction: column;
         gap: 12px;
         text-align: center;
         padding: 32px;
       }
- 
+
       nav { padding: 16px 24px; }
     }
- 
+
     /* ── ANIMATIONS ── */
     .fade-up {
       opacity: 0;
       transform: translateY(24px);
       transition: opacity 0.6s ease, transform 0.6s ease;
     }
- 
+
     .fade-up.visible {
       opacity: 1;
       transform: translateY(0);
@@ -602,23 +602,26 @@
   </style>
 </head>
 <body>
- 
-  <!-- NAV -->
-  
+
+  <!-- BETA PRICING BANNER -->
+  <div style="background: #D97706; color: #FFF; text-align: center; padding: 12px 40px; font-size: 14px; font-weight: 500; letter-spacing: 0.2px;">
+    🎉 Beta pricing — lock in Solo at <strong>$9/mo for life</strong>. Limited to first 50 subscribers. <a href="sms:+14322203767&body=Hi" style="color:#FFF; text-decoration:underline; margin-left:8px;">Start free trial →</a>
+  </div>
+
   <!-- AI TRANSPARENCY BADGE -->
-  <div style="background: #1C1917; color: #FAF7F2; text-align: center; padding: 14px 40px; font-size: 13px; letter-spacing: 0.3px;">
+  <div style="background: #1C1917; color: #FAF7F2; text-align: center; padding: 10px 40px; font-size: 12px; letter-spacing: 0.3px;">
     <span style="opacity: 0.6;">Powered by AI · </span>Mary is an AI assistant, not a human. She's available 24/7 and never forgets a thing. <span style="opacity: 0.6;"> · No humans read your messages.</span>
   </div>
- 
+
   <nav>
     <div class="nav-logo">Life. Covered.</div>
     <a href="sms:+14322203767&body=Hi" class="nav-cta">Text to start free →</a>
   </nav>
- 
+
   <!-- HERO -->
   <section class="hero">
     <div class="hero-content">
-      <div class="hero-badge">Now in beta — 7 days free</div>
+      <div class="hero-badge">Beta pricing · Solo $9/mo for life · 50 spots</div>
       <h1 class="hero-title">
         Your life,<br>
         <em>covered.</em>
@@ -636,28 +639,28 @@
         </div>
       </div>
     </div>
- 
+
     <div class="hero-visual">
       <div class="phone-wrap">
         <div class="phone">
           <div class="phone-screen">
             <div class="phone-header">Mary · Covered</div>
- 
+
             <div class="msg msg-out">
               <div class="msg-bubble">Claire has soccer pickup Friday at 4. Jenny is getting her.</div>
               <div class="msg-label">You</div>
             </div>
- 
+
             <div class="msg msg-in">
               <div class="msg-bubble">Got it — Jenny has Claire's soccer pickup Friday at 4pm. I'll remind her at 2 and again at 3:30. 👍</div>
               <div class="msg-label">Mary · just now</div>
             </div>
- 
+
             <div class="msg msg-out">
               <div class="msg-bubble">What's on the schedule this week?</div>
               <div class="msg-label">You</div>
             </div>
- 
+
             <div class="msg msg-in">
               <div class="msg-bubble">Tuesday: Jackson has football at 4 (you're on pickup). Friday: Claire's soccer at 4 (Jenny's covering). Rest of the week is clear!</div>
               <div class="msg-label">Mary · just now</div>
@@ -667,12 +670,12 @@
       </div>
     </div>
   </section>
- 
+
   <!-- HOW IT WORKS -->
   <section class="section">
     <div class="section-label">How it works</div>
     <h2 class="section-title fade-up">No app. No calendar. No reminders to set. Just text.</h2>
- 
+
     <div class="steps">
       <div class="step fade-up">
         <div class="step-number">01</div>
@@ -691,12 +694,12 @@
       </div>
     </div>
   </section>
- 
+
   <!-- FEATURES -->
   <section class="features-section">
     <div class="section-label">What Mary does</div>
     <h2 class="section-title fade-up">Everything you used to have to remember yourself.</h2>
- 
+
     <div class="features-grid">
       <div class="feature fade-up">
         <div class="feature-icon">📅</div>
@@ -720,12 +723,12 @@
       </div>
     </div>
   </section>
- 
+
   <!-- WHO IT'S FOR -->
   <section class="who-section">
     <div class="section-label">Who it's for</div>
     <h2 class="section-title fade-up">If you have kids and a phone, you're already set up.</h2>
- 
+
     <div class="who-grid">
       <div class="who-card fade-up">
         <div class="who-emoji">👨‍👩‍👧‍👦</div>
@@ -744,12 +747,12 @@
       </div>
     </div>
   </section>
- 
+
   <!-- TESTIMONIALS -->
   <section class="testimonials">
     <div class="section-label">Early users</div>
     <h2 class="section-title fade-up">What parents are saying.</h2>
- 
+
     <div class="testimonials-grid">
       <div class="testimonial fade-up">
         <p class="testimonial-quote">"I texted Mary about pickup on Tuesday and she just... handled it. Reminded my mom, confirmed it with me, never thought about it again. That's all I wanted."</p>
@@ -768,27 +771,27 @@
       </div>
     </div>
   </section>
- 
+
   <!-- BOTTOM CTA -->
   <section class="bottom-cta">
-    <h2 class="bottom-cta-title fade-up">Your life,<br><em style="font-style:italic;color:#D97706;">covered.</em></h2>
-    <p class="bottom-cta-sub fade-up">7 days free. No app. No credit card. Just text.</p>
+    <h2 class="bottom-cta-title fade-up">Your life,<br><em style="font-style:italic;color:#2d6a4f;">covered.</em></h2>
+    <p class="bottom-cta-sub fade-up">7 days free. No app. No credit card. Beta pricing locked for life.</p>
     <div class="bottom-cta-box fade-up">
       <div class="bottom-cta-label">Text "Hi" to</div>
       <div class="bottom-cta-number">(432) 220-3767</div>
-      <div class="bottom-cta-hint">WhatsApp or SMS · 7-day free trial · AI-powered</div>
+      <div class="bottom-cta-hint">WhatsApp or SMS · 7-day free trial · Solo $9/mo locked for life</div>
     </div>
+    <p style="margin-top: 20px; font-size: 13px; color: var(--text-muted);">Beta pricing available to first 50 subscribers only. Full pricing: Solo $12 · Family $19 · Village $24.</p>
   </section>
- 
+
   <!-- FOOTER -->
   <footer>
     <div class="footer-logo">Life. Covered.</div>
     <div class="footer-text">© 2026 Life. Covered. · lifecovered.app</div>
     <div class="footer-text">Questions? Text us.</div>
-    <div class="footer-text"><a href="/privacy" style="color:#78716C;">Privacy Policy</a> · <a href="/terms" style="color:#78716C;">Terms of Service</a></div>
     <div class="footer-text" style="font-size:12px;color:#A8A29E;">Mary is an AI assistant · Not a human · Available 24/7</div>
   </footer>
- 
+
   <script>
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry, i) => {
@@ -800,9 +803,9 @@
         }
       })
     }, { threshold: 0.1 })
- 
+
     document.querySelectorAll('.fade-up').forEach(el => observer.observe(el))
   </script>
- 
+
 </body>
 </html>
